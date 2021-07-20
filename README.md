@@ -34,6 +34,48 @@
 ```
   $ mvn compile
   $ mvn package
+  $ java -jar target/atlassian-agent-jar-with-dependencies.jar
+====================================================
+=======        Atlassian Crack Agent         =======
+=======           https://zhile.io           =======
+=======          QQ Group: 30347511          =======
+====================================================
+
+KeyGen usage: java -jar
+       /root/atlassian-agent/target/atlassian-agent-jar-with-dependencies.
+       jar [-d] [-h] -m <arg> [-n <arg>] -o <arg> -p <arg> -s <arg>
+ -d,--datacenter           Data center license[default: false]
+ -h,--help                 Print help message
+ -m,--mail <arg>           License email
+ -n,--name <arg>           License name[default: <license email>]
+ -o,--organisation <arg>   License organisation
+ -p,--product <arg>        License product, support:
+                           [crowd: Crowd]
+                           [questions: Questions plugin for Confluence]
+                           [crucible: Crucible]
+                           [capture: Capture plugin for JIRA]
+                           [conf: Confluence]
+                           [training: Training plugin for JIRA]
+                           [bitbucket: Bitbucket]
+                           [tc: Team Calendars plugin for Confluence]
+                           [bamboo: Bamboo]
+                           [fisheye: FishEye]
+                           [portfolio: Portfolio plugin for JIRA]
+                           [jc: JIRA Core]
+                           [jsd: JIRA Service Desk]
+                           [jira: JIRA Software(common jira)]
+ -s,--serverid <arg>       License server ID
+
+================================================================================
+
+# Crack agent usage: append -javaagent arg to system environment: CATALINA_OPTS.
+# Example(execute this command or append it to setenv.sh/setenv.bat file): 
+
+  export CATALINA_OPTS="-javaagent:/root/atlassian-agent/target/atlassian-agent-jar-with-dependencies.jar ${CATALINA_OPTS}"
+
+# Then start your confluence/jira server.
+
+
 ```
 * If you don’t know what I’m talking about, it’s best to download my compiled package directly.
 
