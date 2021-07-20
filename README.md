@@ -30,6 +30,11 @@
 
 ### Compile by yourself
 * Clone the source code of this project, and the pom.xml `mvn package` can be compiled after execution in the same level directory .
+> it works with JAVA 8 (openjdk-8-jdk)
+```
+  $ mvn compile
+  $ mvn package
+```
 * If you don’t know what I’m talking about, it’s best to download my compiled package directly.
 
 ### Using help
