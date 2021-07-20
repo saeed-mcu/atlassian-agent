@@ -84,21 +84,21 @@ KeyGen usage: java -jar
 * The help here uses Atlassian's Confluence service as an example.
 
 ### Configure Agent
-1. Put it `atlassian-agent.jar` in a location that you will not delete randomly (all Atlassian services on your server can share the same one `atlassian-agent.jar`).
+1. Put it `atlassian-agent-jar-with-dependencies.jar` in a location that you will not delete randomly (all Atlassian services on your server can share the same one `atlassian-agent.jar`).
 2. Set the environment variable `CATALINA_OPTS` (this is actually the environment variable of Tomcat, used to specify the `-javaagent` parameters attached when starting the java program), and attach the parameters. Specifically, you can do this:
-   * You can put: `export CATALINA_OPTS="-javaagent:/path/to/atlassian-agent.jar ${CATALINA_OPTS}"` such commands in `.bashrc` or `.bash_profile` such files.
-   * You can put: `export CATALINA_OPTS="-javaagent:/path/to/atlassian-agent.jar ${CATALINA_OPTS}"` such a command in `bin目录` the `setenv.sh` or under the service installation `setenv.bat`（windows）.
-   * You can also directly execute the command line: `CATALINA_OPTS="-javaagent:/path/to/atlassian-agent.jar" /path/to/start-confluence.sh` to start your service.
+   * You can put: `export CATALINA_OPTS="-javaagent:/path/to/atlassian-agent-jar-with-dependencies.jar ${CATALINA_OPTS}"` such commands in `.bashrc` or `.bash_profile` such files.
+   * You can put: `export CATALINA_OPTS="-javaagent:/path/to/atlassian-agent-jar-with-dependencies.jar ${CATALINA_OPTS}"` such a command in `bin目录` the `setenv.sh` or under the service installation `setenv.bat`（windows）.
+   * You can also directly execute the command line: `CATALINA_OPTS="-javaagent:/path/to/atlassian-agent-jar-with-dependencies.jar" /path/to/start-confluence.sh` to start your service.
    * Or you know other ways to modify environment variables, but if you have irrelevant Tomcat services on your machine, it is not recommended to modify global `CATALINA_OPTS` environment variables.
 3. If you want to verify whether the configuration is successful, you can do this:
-   * Execute similar commands: `ps aux|grep java` find the corresponding process to see if the `-javaagent` parameters are correctly attached.
+   * Execute similar commands: `ps aux | grep java` find the corresponding process to see if the `-javaagent` parameters are correctly attached.
    * Similar to the software installation directory `/path/to/confluence/logs/catalina.out` : `========= agent working =========` The output of `:` should be found in the Tomcat log .
  
 ### Use KeyGen
 * You have to confirm that the agent has been configured, refer to the above instructions
-* When you try to execute `java -jar /path/to/atlassian-agent.jar` it, you should be able to see the output of the KeyGen parameter help.
+* When you try to execute `java -jar /path/to/atlassian-agent-jar-with-dependencies.jar` it, you should be able to see the output of the KeyGen parameter help.
 * Please take a closer look at the function of each parameter, especially `-p` the value range of the parameter.
-* When Atlassian service is installed, you should see `AAAA-BBBB-CCCC-DDDD` a server id similar to:, please pay attention.
+* When Atlassian service is installed, you should see a server id similar to: `AAAA-BBBB-CCCC-DDDD` , please pay attention.
 * Running KeyGen with correct parameters will output the calculated activation code on the terminal.
 * Copy the generated activation code to activate the service you want to use.
 
