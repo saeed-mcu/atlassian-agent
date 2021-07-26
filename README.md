@@ -25,6 +25,27 @@
 * Provide java-based command line keygen, which is more convenient to use in the terminal environment.
 * Open source projects, you know what you did when you cracked it.
 
+### Prerequisite
+ *  Install database (prefere postgresql)
+```
+ $ apt-get install postgresql postgresql-contrib
+```
+enable run as a service boot
+``` 
+ $ update-rc.d postgresql enable 
+ $ service postgresql start
+```
+connect to database
+```
+$ sudo su - postgres
+$ psql
+postgres=# CREATE USER jiradbuser WITH PASSWORD 'p@ssW0rd';
+postgres=# CREATE DATABASE jiradb WITH ENCODING 'UNICODE' LC_COLLATE 'C' LC_CTYPE 'C' TEMPLATE template0;
+postgres=# GRANT ALL PRIVILEGES ON DATABASE jiradb TO jiradbuser;
+postgres=# exit
+$ logout
+```
+
 ### Download
 * Download the release package of this project directly.
 
