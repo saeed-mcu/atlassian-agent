@@ -26,7 +26,7 @@
 * Open source projects, you know what you did when you cracked it.
 
 ### Prerequisite
- *  Install database (prefere postgresql)
+ *  Install database (prefer postgresql)
 ```
  $ apt-get install postgresql postgresql-contrib
 ```
@@ -48,6 +48,9 @@ $ logout
 
 ### Download
 * Download the release package of this project directly.
+```
+ $ git clone https://github.com/saeed-mcu/atlassian-agent.git
+```
 
 ### Compile by yourself
 * This code works with JAVA 8 (openjdk-8-jdk)
