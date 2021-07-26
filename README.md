@@ -29,9 +29,20 @@
 * Download the release package of this project directly.
 
 ### Compile by yourself
-* Clone the source code of this project, and the pom.xml `mvn package` can be compiled after execution in the same level directory .
-> it works with JAVA 8 (openjdk-8-jdk)
+* This code works with JAVA 8 (openjdk-8-jdk)
+
 ```
+$ apt install openjdk-8-jdk
+$ java -version
+  openjdk version "1.8.0_292"
+  OpenJDK Runtime Environment (build 1.8.0_292-8u292-b10-0ubuntu1~20.04-b10)
+  OpenJDK 64-Bit Server VM (build 25.292-b10, mixed mode)
+```
+
+* Clone the source code of this project, and the pom.xml `mvn package` can be compiled after execution in the same level directory.
+
+```
+  $ apt install maven
   $ mvn compile
   $ mvn package
   $ java -jar target/atlassian-agent-jar-with-dependencies.jar
